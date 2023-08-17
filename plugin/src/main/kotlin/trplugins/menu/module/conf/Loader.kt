@@ -120,9 +120,8 @@ object Loader {
     /**
      * 监听菜单
      */
-    fun listen(file: File) {
-        val isListening = runCatching { !FileListener.isListening(file) }.getOrElse { true }
-        if (!isListening) {
+    internal fun listen(file: File) {
+        if (!FileListener.isListening(file)) {
             FileListener.listener(file) {
                 val start = System.currentTimeMillis()
                 val reload = try {
