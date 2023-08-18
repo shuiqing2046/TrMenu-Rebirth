@@ -9,8 +9,8 @@ import trplugins.menu.api.event.CustomItemSourceEvent
 import trplugins.menu.module.internal.script.asItemStack
 
 /**
- * @author Arasple
- * @date 2021/1/27 12:04
+ * @author Arasple Super_chen520
+ * @date 2023/8/18
  */
 object ItemSource {
 
@@ -29,7 +29,6 @@ object ItemSource {
                 else HookPlugin[HookSkulls::class.java].getSkull(id)
             }
             "JAVASCRIPT", "JS" -> JavaScriptAgent.eval(session, id).asItemStack()
-            "ORAXEN" -> HookPlugin.getOraxen().getItem(id)
             "ITEMSADDER", "IA" -> HookPlugin.getItemsAdder().getItem(id)
             "ZAPHKIEL", "ZL" -> HookPlugin.getZaphkiel().getItem(id)
             else -> CustomItemSourceEvent(name, id, session).also { it.call() }.source

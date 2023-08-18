@@ -7,7 +7,6 @@ import taboolib.module.configuration.Configuration
 import taboolib.module.configuration.Type
 import taboolib.module.nms.ItemTag
 import taboolib.module.nms.ItemTagData
-import trplugins.menu.TrMenu
 import trplugins.menu.TrMenu.actionHandle
 import trplugins.menu.api.menu.ISerializer
 import trplugins.menu.api.reaction.Reactions
@@ -226,7 +225,7 @@ object MenuSerializer : ISerializer {
      * Func Ⅴ. 载入图标显示部分
      */
     private val loadIconProperty: (String, IconProperty?, Configuration?, Configuration?, Configuration?, Int) -> IconProperty =
-        { id, def, it, display, action, order ->
+        { _, def, it, display, action, order ->
             val name = Property.ICON_DISPLAY_NAME.ofStringList(display)
             val texture = Property.ICON_DISPLAY_MATERIAL.ofStringList(display)
             val lore = Property.ICON_DISPLAY_LORE.ofLists(display)

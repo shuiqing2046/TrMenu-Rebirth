@@ -34,6 +34,6 @@ repositories {
 
 dependencies {
     compileOnly("com.google.code.gson:gson:2.8.7")
-    compileOnly("com.electronwill.night-config:core:3.6.5")
+    compileOnly("com.electronwill.night-config:core:3.6.6")
 }
 tasks.tabooRelocateJar { onlyIf { false } }

@@ -1,7 +1,6 @@
 package trplugins.menu.util.net
 
 import taboolib.common.Isolated
-import taboolib.common.env.DependencyDownloader
 import taboolib.common.env.IO
 import trplugins.menu.util.parseJson
 import java.net.HttpURLConnection
@@ -29,10 +28,10 @@ object PasteGG {
     }
 
     private fun getExpiresDate(lastMills: Long): String {
-        val tz = TimeZone.getTimeZone("UTC");
-        val df = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-        df.timeZone = tz;
-        return df.format(Date(System.currentTimeMillis() + lastMills));
+        val tz = TimeZone.getTimeZone("UTC")
+        val df = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
+        df.timeZone = tz
+        return df.format(Date(System.currentTimeMillis() + lastMills))
     }
 
     private fun paste(
