@@ -35,8 +35,8 @@ repositories {
 dependencies {
     compileOnly(project(":common"))
     compileOnly("ink.ptms:nms-all:1.0.0")
-    compileOnly("ink.ptms.core:v11903:11903-minimize:universal")
-    compileOnly("ink.ptms.core:v11903:11903-minimize:mapped")
+    compileOnly("ink.ptms.core:v12001:12001-minimize:universal")
+    compileOnly("ink.ptms.core:v12001:12001-minimize:mapped")
     compileOnly("org.geysermc.floodgate:api:2.2.0-SNAPSHOT")
     compileOnly(fileTree("libs"))
 }

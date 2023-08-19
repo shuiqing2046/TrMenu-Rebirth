@@ -34,7 +34,6 @@ taboolib {
             name("Vault").optional(true)
             name("PlayerPoints").optional(true)
             name("HeadDatabase").optional(true)
-            name("Oraxen").optional(true)
             name("SkinsRestorer").optional(true)
             name("ItemsAdder").optional(true)
             name("floodgate-bukkit").optional(true)
@@ -79,7 +78,6 @@ dependencies {
     compileOnly("ink.ptms:Zaphkiel:2.0.0") { isTransitive = false }
     compileOnly("ca.tweetzy:skulls:2.7.2") { isTransitive = false }
     compileOnly("net.skinsrestorer:skinsrestorer-api:14.2.12") { isTransitive = false }
-    compileOnly("com.github.oraxen:oraxen:-SNAPSHOT") { isTransitive = false }
     compileOnly("org.black_ixx:playerpoints:3.1.1") { isTransitive = false }
     compileOnly("com.github.MilkBowl:VaultAPI:-SNAPSHOT") { isTransitive = false }
     compileOnly("com.github.tritonmc.Triton:core:v3.7.3") { isTransitive = false }

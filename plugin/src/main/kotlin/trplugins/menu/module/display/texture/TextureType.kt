@@ -46,7 +46,6 @@ enum class TextureType(val regex: Regex, val group: Int) {
      *
      * e.g.
      * source:HDB:random
-     * source:ORAXEN:itemId
      *
      */
     SOURCE("[<{]?source[:=](.+)[>}]?", 1),

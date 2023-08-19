@@ -36,7 +36,7 @@ repositories {
 dependencies {
     api(project(":common"))
 
-    compileOnly("net.md-5:bungeecord-chat:1.18-R0.1-SNAPSHOT")
+    compileOnly("net.md-5:bungeecord-chat:1.20-R0.1-SNAPSHOT")
 }
 
 tasks.tabooRelocateJar { onlyIf { false } }
