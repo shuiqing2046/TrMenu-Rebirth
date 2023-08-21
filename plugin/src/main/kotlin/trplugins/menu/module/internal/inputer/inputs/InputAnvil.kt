@@ -4,7 +4,7 @@ import trplugins.menu.util.parseSimplePlaceholder
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 import taboolib.common.platform.event.SubscribeEvent
-import taboolib.common.reflect.Reflex.Companion.getProperty
+import taboolib.library.reflex.Reflex.Companion.getProperty
 import taboolib.library.xseries.XMaterial
 import taboolib.module.nms.PacketReceiveEvent
 import taboolib.module.nms.getI18nName
