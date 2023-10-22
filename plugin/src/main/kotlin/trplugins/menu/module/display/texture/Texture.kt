@@ -27,7 +27,7 @@ class Texture(
     val type: TextureType,
     val texture: String,
     val dynamic: Boolean,
-    var static: ItemStack?,
+    private var static: ItemStack?,
     val meta: Map<TextureMeta, String>
 ) : ITexture {
 

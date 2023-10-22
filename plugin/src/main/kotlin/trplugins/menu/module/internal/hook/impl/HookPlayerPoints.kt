@@ -9,8 +9,8 @@ import taboolib.common.platform.function.submit
 import java.util.concurrent.TimeUnit
 
 /**
- * @author Arasple
- * @date 2021/1/26 22:18
+ * @author Arasple Super_chen520
+ * @date 2023/10/22 11:40 AM
  */
 class HookPlayerPoints : HookAbstract() {
 
@@ -21,19 +21,11 @@ class HookPlayerPoints : HookAbstract() {
         }
 
     fun getPoints(player: OfflinePlayer): Int {
-        return try {
-            playerPointsAPI?.lookAsync(player.uniqueId)?.get(1, TimeUnit.SECONDS) ?: -1
-        } catch (t: Throwable) {
-            playerPointsAPI?.look(player.uniqueId) ?: -1
-        }
+        return playerPointsAPI?.look(player.uniqueId) ?: -1
     }
 
     fun setPoints(player: OfflinePlayer, amount: Int) {
-        try {
-            playerPointsAPI?.setAsync(player.uniqueId, amount)
-        } catch (t: Throwable) {
-            call { playerPointsAPI?.set(player.uniqueId, amount) }
-        }
+        playerPointsAPI?.set(player.uniqueId, amount)
     }
 
     fun hasPoints(player: OfflinePlayer, amount: Int): Boolean {
@@ -41,27 +33,10 @@ class HookPlayerPoints : HookAbstract() {
     }
 
     fun addPoints(player: OfflinePlayer, amount: Int) {
-        try {
-            playerPointsAPI?.giveAsync(player.uniqueId, amount)
-        } catch (t: Throwable) {
-            call { playerPointsAPI?.give(player.uniqueId, amount) }
-        }
+        playerPointsAPI?.give(player.uniqueId, amount)
     }
 
     fun takePoints(player: OfflinePlayer, amount: Int) {
-        try {
-            playerPointsAPI?.takeAsync(player.uniqueId, amount)
-        } catch (t: Throwable) {
-            call { playerPointsAPI?.take(player.uniqueId, amount) }
-        }
+        playerPointsAPI?.take(player.uniqueId, amount)
     }
-
-    private fun call(block: () -> Unit) {
-        if (Bukkit.isPrimaryThread()) {
-            block.invoke()
-        } else {
-            submit(async = false) { block.invoke() }
-        }
-    }
-
 }

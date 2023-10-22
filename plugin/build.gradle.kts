@@ -63,10 +63,12 @@ dependencies {
     taboo(project(":api:action"))
 
     // Libraries
-    compileOnly("org.apache.commons:commons-lang3:3.12.0")
-    compileOnly("com.electronwill.night-config:core:3.6.6")
+    compileOnly("org.apache.commons:commons-lang3:3.13.0")
+    compileOnly("com.electronwill.night-config:core:3.6.7")
 
     // Server Core
+    compileOnly("ink.ptms.core:v12002:12002-minimize:mapped")
+    compileOnly("ink.ptms.core:v12002:12002-minimize:universal")
     compileOnly("ink.ptms.core:v11903:11903-minimize:mapped")
     compileOnly("ink.ptms.core:v11903:11903-minimize:universal")
     compileOnly("ink.ptms.core:v11701:11701-minimize:mapped")
@@ -74,14 +76,14 @@ dependencies {
     compileOnly("ink.ptms.core:v11604:11604")
 
     // Hook Plugins
-    compileOnly("me.clip:placeholderapi:2.11.3") { isTransitive = false }
-    compileOnly("ink.ptms:Zaphkiel:2.0.0") { isTransitive = false }
-    compileOnly("ca.tweetzy:skulls:2.7.2") { isTransitive = false }
+    compileOnly("me.clip:placeholderapi:2.11.4") { isTransitive = false }
+    compileOnly("ink.ptms:Zaphkiel:2.0.10") { isTransitive = false }
+    compileOnly("ca.tweetzy:skulls:3.10.0") { isTransitive = false }
     compileOnly("net.skinsrestorer:skinsrestorer-api:14.2.12") { isTransitive = false }
-    compileOnly("org.black_ixx:playerpoints:3.1.1") { isTransitive = false }
+    compileOnly("org.black_ixx:playerpoints:3.2.6") { isTransitive = false }
     compileOnly("com.github.MilkBowl:VaultAPI:-SNAPSHOT") { isTransitive = false }
-    compileOnly("com.github.tritonmc.Triton:core:v3.7.3") { isTransitive = false }
-    compileOnly("com.github.tritonmc.Triton:api:v3.7.3") { isTransitive = false }
+    compileOnly("com.github.tritonmc.Triton:core:v3.9.0") { isTransitive = false }
+    compileOnly("com.github.tritonmc.Triton:api:v3.9.0") { isTransitive = false }
 
     compileOnly(fileTree("libs"))
 }

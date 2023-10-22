@@ -29,7 +29,7 @@ import trplugins.menu.module.internal.script.evalScript
  */
 object TrMenu : Plugin() {
 
-    @Config("settings.yml", true.toString(), autoReload = true)
+    @Config("settings.yml", autoReload = true)
     lateinit var SETTINGS: Configuration
         private set
 

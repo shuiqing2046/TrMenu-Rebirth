@@ -20,11 +20,11 @@ class HookSkulls : HookAbstract() {
     private val empty = buildItem(XMaterial.PLAYER_HEAD) { name = "UNKNOWN_${super.name.uppercase()}" }
 
     fun getSkull(id: String): ItemStack {
-        return SkullsAPI.getSkullItemStack(id.toIntOrNull() ?: 1) ?: empty
+        return Skulls.getAPI().getSkullItem(id.toIntOrNull() ?: 1) ?: empty
     }
 
     fun getRandomSkull(): ItemStack {
-        return SkullsAPI.getRandomSkull()?.itemStack ?: empty
+        return Skulls.getAPI().randomSkull?.itemStack ?: empty
     }
 
     fun getId(itemStack: ItemStack): String? {
