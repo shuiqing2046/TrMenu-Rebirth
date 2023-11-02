@@ -79,7 +79,7 @@ dependencies {
     compileOnly("me.clip:placeholderapi:2.11.4") { isTransitive = false }
     compileOnly("ink.ptms:Zaphkiel:2.0.10") { isTransitive = false }
     compileOnly("ca.tweetzy:skulls:3.10.0") { isTransitive = false }
-    compileOnly("net.skinsrestorer:skinsrestorer-api:14.2.12") { isTransitive = false }
+    compileOnly("net.skinsrestorer:skinsrestorer-api:15.0.2") { isTransitive = false }
     compileOnly("org.black_ixx:playerpoints:3.2.6") { isTransitive = false }
     compileOnly("com.github.MilkBowl:VaultAPI:-SNAPSHOT") { isTransitive = false }
     compileOnly("com.github.tritonmc.Triton:core:v3.9.0") { isTransitive = false }
