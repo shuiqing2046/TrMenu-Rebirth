@@ -5,8 +5,8 @@ import net.skinsrestorer.api.SkinsRestorer
 import trplugins.menu.module.internal.hook.HookAbstract
 
 /**
- * @author Arasple
- * @date 2021/1/27 14:12
+ * @author MSCAoMe
+ * @date 2023/11/11 14:12
  */
 class HookSkinsRestorer : HookAbstract() {
 
