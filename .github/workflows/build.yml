@@ -51,5 +51,4 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: TrMenu Release
-          # path: build/libs/*.jar
-          path: ./
+          path: build/libs/*.jar
